@@ -13,7 +13,7 @@ namespace WeatherApp
             Conf conf = JsonConvert.DeserializeObject<Conf>(File.ReadAllText("conf.json"));
 
             // Create the request to send to the server
-            string queryString = "http://api.openweatermap.org/data/2.5/weather?zip=" +
+            string queryString = "http://api.openweathermap.org/data/2.5/weather?zip=" +
                 zipcode + ",us&appid=" + conf.APIKey + "&units=imperial";
 
             // Send the request to the server
