@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CA348049-E133-405C-82D0-9A2C83FF60A1}</ProjectGuid>
+    <ProjectGuid>{A705DD0A-2D7D-42F7-885F-F568261955AB}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
@@ -152,7 +152,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\WeatherApp\WeatherApp.csproj">
-      <Project>{FE6A3C5B-0C31-44FD-9D64-CDE3AACC66FA}</Project>
+      <Project>{57067B2F-DBD5-45FD-9E00-D0E8B6A4EFBF}</Project>
       <Name>WeatherApp</Name>
     </ProjectReference>
   </ItemGroup>
