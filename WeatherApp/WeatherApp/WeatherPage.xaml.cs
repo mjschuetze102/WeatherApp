@@ -18,9 +18,14 @@ namespace WeatherApp
 
         private async void GetWeatherBtn_Clicked(object sender, EventArgs e)
         {
-            // Get the weather at the specified zip code
-            Weather weather = await Core.GetWeather("60601");
-            getWeatherBtn.Text = weather.Title;
+            if (!String.IsNullOrEmpty(zipCodeEntry.Text))
+            {
+                // Get the weather at the specified zip code
+                Weather weather = await Core.GetWeather(zipCodeEntry.Text);
+                BindingContext = weather;
+
+                getWeatherBtn.Text = "Search Again";
+            }
         }
 	}
 }
