@@ -9,12 +9,12 @@ namespace WeatherApp
     {
         public static async Task<Weather> GetWeather(string zipcode)
         {
-            // Load the API Key from a configuration file
-            Conf conf = JsonConvert.DeserializeObject<Conf>(File.ReadAllText("conf.json"));
+            // Load the API Key
+            string apiKey = "YOUR API KEY HERE";
 
             // Create the request to send to the server
             string queryString = "http://api.openweathermap.org/data/2.5/weather?zip=" +
-                zipcode + ",us&appid=" + conf.APIKey + "&units=imperial";
+                zipcode + ",us&appid=" + apiKey + "&units=imperial";
 
             // Send the request to the server
             dynamic results = await DataService.getDataFromService(queryString).ConfigureAwait(false);
@@ -42,10 +42,5 @@ namespace WeatherApp
                 return null;
             }
         }
-    }
-
-    class Conf
-    {
-        public string APIKey { get; set; }
     }
 }
